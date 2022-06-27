@@ -69,8 +69,8 @@
   flex: 1;
 }
 
-.flexcolumns .columns .column-1,
-.flexcolumns .columns .column-2 {
+.flexcolumns .column .column-1,
+.flexcolumns .column .column-2 {
   height: 100%;
 }
 
