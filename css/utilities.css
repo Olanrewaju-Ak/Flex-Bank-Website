@@ -4,7 +4,7 @@
 }
 
 .text-seconday {
-  color: #0284d0;
+  color: #4297A0;
 }
 
 /* Button */
@@ -28,7 +28,7 @@
 }
 
 .btn-secondary , .bg-secondary {
-  background: #0284d0;
+  background: #4297A0;
   color: #fff;
 }
 .btn-dark, .bg-dark {
@@ -39,6 +39,10 @@
 .btn-light, .bg-light {
   background: #f4f4f4;
   color: #333;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
 }
 
 /* Flex items */
@@ -55,6 +59,10 @@
 }
 
 /* Flex columns */
+.flex-columns.flex-reverse .row{
+  flex-direction: row-reverse;
+}
+
 .flex-columns .row {
   display: flex;
   flex-direction: row;
@@ -69,8 +77,8 @@
   flex: 1;
 }
 
-.flexcolumns .column .column-1,
-.flexcolumns .column .column-2 {
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
   height: 100%;
 }
 
@@ -78,4 +86,57 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+
+}
+
+.flex-columns h2 {
+  font-size: 40px;
+  font-weight: 100;
+}
+.flex-columns h4 {
+  margin-bottom: 10px;
+}
+
+.flex-columns p{
+  margin: 20px 0;
+}
+
+/* Section header */
+.section-header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-header h2{
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.section-padding {
+  padding: 20px 20px 40px;
+}
+
+/* Flex grid */
+.flex-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.flex-grid .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
 }
