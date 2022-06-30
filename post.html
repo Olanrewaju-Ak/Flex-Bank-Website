@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/utilities.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Post 1</title>
 </head>
+
 <body id="home">
   <header class="hero blog">
-    <div class="navbar" id="navbar">
+    <div class="navbar top" id="navbar">
       <h1 class="logo">
         <span class="text-primary"><i class="fas fa-bank"></i> F L E X </span>Bank
       </h1>
@@ -37,12 +41,27 @@
         <i class="fas fa-user"></i>Posted by <strong>Janet Janne</strong> | June 25 2022
       </p>
       <img src="images/blog/blog1.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, cupiditate? Tempore minus optio perspiciatis adipisci iste, quaerat laudantium voluptatum veniam repudiandae eius nulla illum, quibusdam dicta, esse eum fugiat porro.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, voluptatibus ipsa laborum doloribus explicabo veniam ut architecto sint enim quaerat expedita at eius, neque sed perspiciatis unde nesciunt ducimus nulla? Quibusdam pariatur itaque neque illo temporibus nostrum iure, sit eum. Fugit numquam ducimus, pariatur maiores neque omnis. Perferendis ducimus eveniet aspernatur praesentium alias! Ipsum, eveniet inventore. Facere nesciunt ex commodi!</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa labore, expedita nisi veniam eius corporis quae nulla deserunt placeat mollitia. Eius, corporis fuga perferendis inventore saepe error facilis sit. Atque et voluptate ut natus ad commodi possimus explicabo culpa sint, praesentium fuga, provident expedita voluptates facere quam dolorem id aliquam.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa labore, expedita nisi veniam eius corporis quae nulla deserunt placeat mollitia. Eius, corporis fuga perferendis inventore saepe error facilis sit. Atque et voluptate ut natus ad commodi possimus explicabo culpa sint, praesentium fuga, provident expedita voluptates facere quam dolorem id aliquam.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto itaque sequi et, ad natus reiciendis fugiat delectus quo non totam officia adipisci minus molestiae nisi ipsa amet incidunt optio nemo. Accusamus obcaecati esse harum, animi corrupti sapiente ratione expedita beatae eligendi maiores ab amet officia, laborum, odit provident ipsum porro?</p>
-    
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, cupiditate? Tempore minus optio perspiciatis
+        adipisci iste, quaerat laudantium voluptatum veniam repudiandae eius nulla illum, quibusdam dicta, esse eum
+        fugiat porro.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, voluptatibus ipsa laborum doloribus explicabo
+        veniam ut architecto sint enim quaerat expedita at eius, neque sed perspiciatis unde nesciunt ducimus nulla?
+        Quibusdam pariatur itaque neque illo temporibus nostrum iure, sit eum. Fugit numquam ducimus, pariatur maiores
+        neque omnis. Perferendis ducimus eveniet aspernatur praesentium alias! Ipsum, eveniet inventore. Facere nesciunt
+        ex commodi!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa labore, expedita nisi veniam eius corporis quae
+        nulla deserunt placeat mollitia. Eius, corporis fuga perferendis inventore saepe error facilis sit. Atque et
+        voluptate ut natus ad commodi possimus explicabo culpa sint, praesentium fuga, provident expedita voluptates
+        facere quam dolorem id aliquam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa labore, expedita nisi veniam eius corporis quae
+        nulla deserunt placeat mollitia. Eius, corporis fuga perferendis inventore saepe error facilis sit. Atque et
+        voluptate ut natus ad commodi possimus explicabo culpa sint, praesentium fuga, provident expedita voluptates
+        facere quam dolorem id aliquam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto itaque sequi et, ad natus reiciendis fugiat
+        delectus quo non totam officia adipisci minus molestiae nisi ipsa amet incidunt optio nemo. Accusamus obcaecati
+        esse harum, animi corrupti sapiente ratione expedita beatae eligendi maiores ab amet officia, laborum, odit
+        provident ipsum porro?</p>
+
     </section>
   </main>
 
@@ -55,5 +74,27 @@
     </div>
     <p>copyright &copy; 2022 FLEX Bank</p>
   </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    };
+  </script>
 </body>
+
 </html>

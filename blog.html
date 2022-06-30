@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/utilities.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Read Our Blog</title>
 </head>
+
 <body id="home">
   <header class="hero blog">
-    <div class="navbar" id="navbar">
+    <div class="navbar top" id="navbar">
       <h1 class="logo">
         <span class="text-primary"><i class="fas fa-bank"></i> F L E X </span>Bank
       </h1>
@@ -31,11 +35,11 @@
     </div>
   </header>
   <main>
-    <article  class="flex-columns">
+    <article class="flex-columns">
       <div class="row">
         <div class="column">
           <div class="column-1">
-              <img src="images/blog/blog1.jpg" alt="people">
+            <img src="images/blog/blog1.jpg" alt="people">
           </div>
         </div>
         <div class="column">
@@ -44,7 +48,9 @@
             <p class="meta">
               <i class="fas fa-user"></i>Posted by <strong>Janet Janne</strong> | June 25 2022
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, cupiditate? Tempore minus optio perspiciatis adipisci iste, quaerat laudantium voluptatum veniam repudiandae eius nulla illum, quibusdam dicta, esse eum fugiat porro.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, cupiditate? Tempore minus optio
+              perspiciatis adipisci iste, quaerat laudantium voluptatum veniam repudiandae eius nulla illum, quibusdam
+              dicta, esse eum fugiat porro.</p>
             <a href="post.html" class="btn btn-dark">
               <i class="fas fa-chevron"></i>
               Read More
@@ -53,11 +59,11 @@
         </div>
       </div>
     </article>
-    <article  class="flex-columns flex-reverse">
+    <article class="flex-columns flex-reverse">
       <div class="row">
         <div class="column">
           <div class="column-1">
-              <img src="images/blog/blog2.jpg" alt="people">
+            <img src="images/blog/blog2.jpg" alt="people">
           </div>
         </div>
         <div class="column">
@@ -66,7 +72,9 @@
             <p class="meta">
               <i class="fas fa-user"></i>Posted by <strong>Umar Jamal</strong> | June 28 2022
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, cupiditate? Tempore minus optio perspiciatis adipisci iste, quaerat laudantium voluptatum veniam repudiandae eius nulla illum, quibusdam dicta, esse eum fugiat porro.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, cupiditate? Tempore minus optio
+              perspiciatis adipisci iste, quaerat laudantium voluptatum veniam repudiandae eius nulla illum, quibusdam
+              dicta, esse eum fugiat porro.</p>
             <a href="post.html" class="btn btn-light">
               <i class="fas fa-chevron"></i>
               Read More
@@ -76,11 +84,11 @@
       </div>
     </article>
 
-    <article  class="flex-columns">
+    <article class="flex-columns">
       <div class="row">
         <div class="column">
           <div class="column-1">
-              <img src="images/blog/blog3.jpg" alt="people">
+            <img src="images/blog/blog3.jpg" alt="people">
           </div>
         </div>
         <div class="column">
@@ -89,7 +97,9 @@
             <p class="meta">
               <i class="fas fa-user"></i>Posted by <strong>Amar Kams</strong> | July 01 2022
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, cupiditate? Tempore minus optio perspiciatis adipisci iste, quaerat laudantium voluptatum veniam repudiandae eius nulla illum, quibusdam dicta, esse eum fugiat porro.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, cupiditate? Tempore minus optio
+              perspiciatis adipisci iste, quaerat laudantium voluptatum veniam repudiandae eius nulla illum, quibusdam
+              dicta, esse eum fugiat porro.</p>
             <a href="post.html" class="btn btn-dark">
               <i class="fas fa-chevron"></i>
               Read More
@@ -109,5 +119,27 @@
     </div>
     <p>copyright &copy; 2022 FLEX Bank</p>
   </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    };
+  </script>
 </body>
+
 </html>
